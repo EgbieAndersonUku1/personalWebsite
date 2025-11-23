@@ -35,7 +35,6 @@ searchFormSideBar.setSideBarElement(searchFormSideBarElement);
 searchFormSideBar.setToggleButtonElement(searchFormButtonElement);
 
 // Assign the eventListeners to their representive targets
-contactMeLinkElement.addEventListener("click", handleContactMeLink)
 closeSearchButtonElement.addEventListener("click", handleSearchCloseBtn);
 loadMoreBtnElement.addEventListener("click", handleLoadBtnClick);
 searchFormButtonElement.addEventListener("click", handleSearchBtn);
@@ -136,6 +135,7 @@ function displayAnimatedText() {
 
     // Phrases to be displayed in the animation
     const phrases = [
+        "I create fast, scalable, and user-focused digital products",
         "I am a Fullstack developer",
         "I am Sofware Developer",
         "I am a Web developer",
@@ -147,7 +147,8 @@ function displayAnimatedText() {
         "I know Node",
         "I know Git",
         "I am constantly learning and improving myself",
-        "I am creative and the entire world is my inspiration"
+        "I am creative and the entire world is my inspiration",
+        
     ];
 
     // Initialize the TypeText instance

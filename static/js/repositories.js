@@ -8,6 +8,61 @@ function addToRepository(repository) {
 }
 
 const listOfRepositories = [
+
+    {
+  name: "Django 2FA Recovery Codes",
+  description: "A Django app for generating, managing, and validating one-time use recovery codes as a backup for two-factor authentication (2FA). Users are given a set of secure recovery codes that can be used if they lose access to their primary 2FA method. Each code is invalidated after use to ensure better security.",
+  languages: ["Python", "Django", "HTML", "CSS"],
+  gitLink: "https://github.com/EgbieAndersonUku1/django_2fa_recovery_codes",
+  image: "static/img/jpg/django-2fa-recovery.jpg",
+  hasWebsite: false,
+  websiteUrl: "",
+  dateCreated: "2025-09-23",
+  indexed: "",
+  projectStatus: "Completed",
+  tags: [
+    "django",
+    "2fa",
+    "recovery codes",
+    "security",
+    "authentication",
+    "backup",
+    "one-time use",
+    "django app",
+    "TOTP"
+  ]
+},
+
+
+    {
+  name: "Django Email Sender",
+  description: "A clean, reusable, lightweight and chainable utility for sending emails in Django. Supports HTML and plain-text templates, context injection, and optional logging or database integration for tracking email delivery. It uses a fluent API so templated emails can be composed and sent with minimal boilerplate.",
+  languages: ["Python", "Django", "HTML", "Text", "CSS"],
+  gitLink: "https://github.com/EgbieAndersonUku1/django-email-sender",
+  image: "static/img/png/django-email-sender.png",
+  hasWebsite: true,
+  websiteUrl: "https://pypi.org/project/django-email-sender/",
+  dateCreated: "2025-04-23",
+  indexed: "",
+  projectStatus: "Completed",
+  tags: [
+    "django",
+    "email",
+    "python",
+    "templating",
+    "chainable api",
+    "logging",
+    "delivery tracking",
+    "lightweight",
+    "utility",
+    "reusable",
+    "html email",
+    "plain text email",
+    "context injection",
+    "open source",
+  ]
+},
+
     {
     name: 'Portfolio',
     description: "My portfolio serves as a comprehensive showcase of all my GitHub projects. It provides a curated collection of my work, spanning various domains and demonstrating my skills and expertise in software development as well as the different programming language. Visitors can explore my projects to gain insight into my capabilities and contributions.",

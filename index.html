@@ -4,227 +4,393 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="static/css/css.css">
     <link rel="shortcut icon" href="static/img/main-bg.png" type="image/x-icon">
     <link rel="shortcut icon" href="static/img/home-outline.svg" type="image/x-icon">
     <link rel="shortcut icon" href="static/img/png/computers-33039_1920.png" type="image/x-icon">
+     <script src="static/js/counter.js" defer type="module"></script>
     <title>Portifolio</title>
 
 </head>
 
 <body>
     <!-- The navigation section -->
-    <nav>
-        <div class="container center blue-bg padding-top-xsm padding-bottom-xsm color-white"
-            aria-label="Site Navigation">
-            <a href="index.html" class="nav-link">Portifolio</a>
-        </div>
-    </nav>
+      <header>
+        <nav id="nav-section" aria-label="Main navigation">
+
+            <div class="nav-logo">
+                <a href="#" class="nav-link" aria-label="Go to portfolio">
+                    Portfolio
+                </a>
+            </div>
+
+            <ul class="nav-links center">
+                <li><a href="#about-me" class="nav-link">About me</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact me</a></li>
+                <li><a href="faq.html" class="nav-link">Learn more</a></li>
+            </ul>
+
+        </nav>
+    </header>
 
     <main>
         <!-- The call to action section -->
-        <section id="call-to-action">
-            <div class="container padding-bottom-sm">
+           <!-- Hero/intro section at the top of the portfolio website -->
+        <section id="header-info" aria-labelledby="hero-title" role="region">
 
-                <div class="container">
-                    <div class="icons flex-col padding-top-lg madimi-one-regular" aria-label="Main Navigation">
-                        <div class="home-icon">
-                            <a href="#" aria-label="Home" id="call-to-action">
-                                <img src="static/img/icons/svg/home-outline.svg" alt="Home Icon" class="icon">
-                                <span class="menu-item hide-item">Home</span>
-                            </a>
-                        </div>
-                        <div class="about-me-icon">
-                            <a href="#about-me" aria-label="About">
-                                <img src="static/img/icons/svg/help-about.svg" alt="About Icon" class="icon">
-                                <span class="menu-item hide-item">About</span>
-                            </a>
-                        </div>
+            <div class="hero__spiral" aria-hidden="true"></div>
 
-                        <div class="skills-icon">
-                            <a href="#skills" aria-label="Skills">
-                                <img src="static/img/png/computers-33039_1920.png" alt="Skills Icon" class="icon">
-                                <span class="menu-item hide-item">Skills</span>
-                            </a>
-                        </div>
+            <div class="center mb-100">
+                <h1 class="font-white capitalize fade-in-up hero__title bubble-text" id="hero-title">
+                    Egbie Uku
+                </h1>
+            </div>
 
-                        <div class="projects-icon">
-                            <a href="#projects" aria-label="Projects">
-                                <img src="static/img/icons/svg/projects.svg" alt="Projects Icon" class="icon">
-                                <span class="menu-item hide-item">Projects</span>
-                            </a>
-                        </div>
+            <div class="center">
+                 <span id="animated-text" class="color-white"></span>
+            </div>
 
-                        <div class="contact-me-icon">
-                            <a href="mailto:egbieuku@hotmail.com" aria-label="Contact" class="contact-me">
-                                <img src="static/img/icons/svg/email.svg" alt="Contact Icon" class="icon">
-                                <span class="menu-item hide-item">Contact</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="info">
-                        <h1 class="poppins-thin font-lg">Egbie Uku</h1>
-                        <span id="animated-text" class="color-white"></span>
-                    </div>
 
-                    <div class="image">
-                        <img src="static/img/png/computers-33039_1920.png" alt="" srcset="" class="call-to-action-img">
-                    </div>
+
+            <!-- Site statistics section -->
+            <div class="mt-lg" id="site-stats" role="region" aria-label="Site statistics">
+
+                <!-- Projects -->
+                <div class="companies-using center flex flex-column">
+                    <span class="counter font-white" id="projects-counter" aria-label="Over one hundred projects">
+                        67+
+                    </span>
+                    <p class="font-white capitalize small">Projects</p>
                 </div>
+
+                <!-- Programming Languages -->
+                <div class="companies-using center flex flex-column">
+                    <span class="counter font-white" id="languages-counter"
+                        aria-label="Over eight programming languages">
+                        8+
+                    </span>
+                    <p class="font-white capitalize">Programming languages</p>
+                </div>
+
+                <!-- Frameworks -->
+                <div class="companies-using center flex flex-column">
+                    <span class="counter font-white" id="frameworks-counter" aria-label="Over eight frameworks">
+                        8+
+                    </span>
+                    <p class="font-white capitalize">Frameworks</p>
+                </div>
+
+                <!-- Tools -->
+                <div class="companies-using center flex flex-column">
+                    <span class="counter font-white" id="tools-counter" aria-label="Over eight tools">
+                        8+
+                    </span>
+                    <p class="font-white capitalize">Tools</p>
+                </div>
+
+                <!-- Database -->
+                <div class="companies-using center flex flex-column">
+                    <span class="counter font-white" id="database-counter" aria-label="Over eight databases">
+                        8+
+                    </span>
+                    <p class="font-white capitalize">Database & Deployment</p>
+                </div>
+
+                  <!-- open source -->
+                <div class="center flex flex-column">
+                    <span class="counter font-white" id="open-source-counter" aria-label="Open source">
+                        2+
+                    </span>
+                    <p class="font-white capitalize">Open source</p>
+                </div>
+
+            </div>
+
+
+
+        </section>
+
+     
+           <!-- Portfolio introduction / call-to-action section -->
+        <section class="cta-section" aria-labelledby="cta-title" role="region"
+            aria-label="Portfolio introduction section">
+            <div class="container">
+
+               
+                <h2 id="cta-about-me" class="center title mt-lg">
+                    <span id="cta-title-tail">A little about</span> Me
+                </h2>
+
+                <h2 class="center subtitle mt-md">
+                    Crafting clean, efficient and scalable digital solutions.
+                </h2>
+
+                <p class="center description mt-md">
+                    I build modern web applications, work in open source with a focus on performance,
+                    user experience, and clean code.
+                </p>
+
+                ]
+                <blockquote class="center description mt-md" aria-label="Professional tagline">
+                    Turning ideas into real, functional products.
+                </blockquote>
+
+
+                <blockquote class="center description" aria-label="Mission statement">
+                    Code that works, design that feels right, and solutions people love using.
+                </blockquote>
+
+
+                <p class="center description mt-md">
+                    <strong>What I do:&nbsp;</strong>
+                    Full-stack development, automation, developer, problem solver, integrations, and scalable application design.
+                </p>
+
+
+                <p class="center description mt-md">
+                    <strong>How I work:&nbsp;</strong>
+                    Clean code, thoughtful architecture, strong communication and attention to detail.
+                </p>
+
+                <!-- Hero image -->
+                <div class="image center">
+                    <img src="static/img/png/developer_recruiter_hero_section.png"
+                        alt="Flat illustration of a developer and recruiter shaking hands in a modern office"
+                        loading="lazy" id="cta-hero-section-img">
+                </div>
+
             </div>
         </section>
 
-
-        <!-- The banner -->
-        <div class="banner">
-            <p>Innovation Driven, Technology Focused</p>
-        </div>
+   
 
         <!-- The about me section -->
-        <section id="about-me">
-            <div class="container flex-col center">
-                <h1>About Me</h1>
-                <p>
-                    Welcome to my software portfolio, a comprehensive showcase of my expertise and achievements in software development.
-                     This portfolio features a diverse range of projects, including web applications and backend systems,
-                      highlighting my proficiency in various technologies and tools.
-                    
+           <!-- About section describing the developer and portfolio -->
+        <section id="about-section" aria-labelledby="about-title" role="region">
+            <div class="container width-65 pb-lg color-white">
+
+                <h2 id="about-title" class="center title mt-lg">
+                    <span id="cta-title-tail">About</span> Me
+                </h2>
+
+
+                <h3 class="center subtitle mt-md">
+                    Developer. Problem Solver. Builder of useful things.
+                </h3>
+
+
+                <p class="center description mt-md">
+                    Welcome to my software portfolio, a curated collection of the work, ideas, and engineering
+                    decisions that define my journey as a developer. Here, you'll find a mix of web applications,
+                    backend systems,
+                    tools, and experiments that highlight my passion for building clean, scalable, and meaningful
+                    software.
                 </p>
-                <p>
-                    Throughout my portfolio, you'll find projects developed using languages such as Python, JavaScript, and others, 
-                    along with frameworks like Express JS, Django and Flask as well as incoporating different languages into my projects
-                    such as DiscordJS to name but a few. Leveraging modern development methodologies and best practices, 
-                    each project demonstrates my ability to deliver high-quality solutions tailored to specific requirements.
+
+                <p class="center description mt-md">
+                    I work with a range of technologies including Python, JavaScript,
+                    and tools like Django, Flask, Express.js, and Discord.js. Whether it's developing polished
+                    interfaces or crafting robust backend
+                    architectures, I approach every project with clarity, intention, and an eye for detail.
                 </p>
 
-                <p>
-                    From building interactive web interfaces with JavaScript frameworks to designing backend systems with Python
-                     frameworks like Express JS, Django and Flask, my portfolio reflects my commitment to innovation and excellence in software development. 
-                     Whether it's creating intuitive user experiences or optimizing performance and security, I strive to exceed expectations
-                     and deliver tangible results.
+                <p class="center description mt-md">
+                    My process blends modern development practices with a strong focus on performance, security, and
+                    user experience. Every project you see here was designed not just to work but to solve real
+                    problems in a thoughtful, maintainable way.
                 </p>
-                <p>
-                    As you explore my portfolio, I invite you to discover the depth of my skills and the value I can bring to your projects.
-                     Whether you're a potential employer, client, or looking for a collaborator, I'm eager to discuss how my expertise can contribute to your success. 
-                     Thank you for visiting, and I look forward to connecting with you soon
+
+                <p class="center description mt-md">
+                    As you explore, I invite you to dive into the code, the decisions behind it, and the outcomes it
+                    created. Whether you're a recruiter, potential employer, collaborator, or someone curious about my
+                    work, I'm excited to connect and discuss how my skills can contribute to your goals.
                 </p>
-            </div>
 
-        </section>
-        <div class="banner margin-bottom-sm">
-        </div>
-
-        <!-- The skills sections -->
-        <section id="skills" aria-label="Skills">
-           
-            <div class="skills-img center">
-                <img src="static/img/png/Technical skills.png" alt="Technical Skills Image" class="technical-skill-img">
-            </div>
-
-            <h3 class="center padding-bottom-sm">Language, Frameworks and Tools</h3>
-
-            <div class="cards" aria-label="Language, Frameworks and Tools">
-
-                <div class="card" aria-label="HTML">
-                    <div class="header">
-                        <img src="static/img/icons/svg/file-type-html.svg" alt="HTML Icon" srcset="" class="skill-icon">
-                    </div>
-                    <div class="body">
-                        <p>HTML</p>
-                    </div>
-                </div>
-
-                <div class="card" aria-label="CSS">
-                    <div class="header">
-                        <img src="static/img/icons/svg/css-3.svg" alt="CSS Icon" class="skill-icon">
-                    </div>
-                    <div class="body">
-                        <p>CSS</p>
-                    </div>
-                </div>
-
-                <div class="card" aria-label="JavaScript">
-                    <div class="header">
-                        <img src="static/img/icons/svg/javascript-js.svg" alt="JavaScript Icon" class="skill-icon">
-                    </div>
-                    <div class="body">
-                        <p>JavaScript</p>
-                    </div>
-                </div>
-
-                <div class="card" aria-label="Node.js">
-                    <div class="header">
-                        <img src="static/img/icons/svg/node-js.svg" alt="Node.js Icon" class="skill-icon">
-                    </div>
-                    <div class="body">
-                        <p>Node.js</p>
-                    </div>
-                </div>
-
-                <div class="card" aria-label="Express.js">
-                    <div class="header">
-                        <img src="static/img/icons/svg/nodejs.svg" alt="Express.js Icon" class="skill-icon">
-                    </div>
-                    <div class="body">
-                        <p>Express.js</p>
-                    </div>
-                </div>
-
-                <div class="card" aria-label="Python">
-                    <div class="header">
-                        <img src="static/img/icons/svg/python (1).svg" alt="Python Icon" class="skill-icon">
-                    </div>
-                    <div class="body">
-                        <p>Python</p>
-                    </div>
-                </div>
-
-                <div class="card" aria-label="Django">
-                    <div class="header">
-                        <img src="static/img/icons/svg/django (1).svg" alt="Django Icon" class="skill-icon">
-                    </div>
-                    <div class="body">
-                        <p>Django</p>
-                    </div>
-                </div>
-
-                <div class="card" aria-label="Python Flask">
-                    <div class="header">
-                        <img src="static/img/icons/svg/flask.svg" alt="Python Flask Icon" class="skill-icon">
-                    </div>
-                    <div class="body">
-                        <p>Python Flask</p>
-                    </div>
-                </div>
-
-                <div class="card" aria-label="GitHub">
-                    <div class="header">
-                        <img src="static/img/icons/svg/gitlab (1).svg" alt="GitHub Icon" class="skill-icon">
-                    </div>
-                    <div class="body">
-                        <p>Github</p>
-                    </div>
-                </div>
-
-                <div class="card" aria-label="GitHub">
-                    <div class="header">
-                        <img src="static/img/icons/svg/postman.svg" alt="GitHub Icon" class="skill-icon">
-                    </div>
-                    <div class="body">
-                        <p>Postman</p>
-                    </div>
-                </div>
 
             </div>
-
         </section>
 
-        <div class="banner"></div>
+
+
+           <!-- Skills section listing programming languages, frameworks, tools, and deployment experience -->
+        <section id="skills" aria-labelledby="skills-title" role="region">
+
+            <div class="container pt-lg color-white">
+
+                <h2 id="skills-title" class="center pb-lg">
+                    Languages, Frameworks, Tools & More
+                </h2>
+
+
+                <p class="center description width-65 mt-md">
+                    A collection of the technologies I use to build clean, scalable, and professional applications
+                    from back-end systems to front-end functionality and deployment pipelines.
+                </p>
+
+
+                <div class="shadow-cards two-column-grid width-65 pt-lg row-gap-40" id="skills-card">
+
+                    <!-- Programming Languages Card -->
+                    <div class="card feature-card" role="region" aria-labelledby="languages-title">
+                        <div class="head column-grid card-header">
+                            <h3 id="languages-title" class="center">Programming Languages</h3>
+                        </div>
+                        <div class="body">
+                            <p class="card-body"><span class="check" aria-hidden="true">✔</span> Python</p>
+                            <p class="card-body"><span class="check" aria-hidden="true">✔</span> JavaScript</p>
+                            <p class="card-body"><span class="check" aria-hidden="true">✔</span> HTML</p>
+                            <p class="card-body"><span class="check" aria-hidden="true">✔</span> CSS</p>
+                            <p class="card-body"><span class="check" aria-hidden="true">✔</span> Core ES6+ concepts</p>
+                            <p class="card-body"><span class="check" aria-hidden="true">✔</span> API design fundamentals
+                            </p>
+                            <p class="card-body"><span class="check" aria-hidden="true">✔</span> Clean coding practices
+                            </p>
+                            <p class="card-body"><span class="check" aria-hidden="true">✔</span> Version control basics
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Frameworks Card -->
+                    <div class="card feature-card" role="region" aria-labelledby="frameworks-title">
+                        <div class="head column-grid card-header">
+                            <h3 id="frameworks-title" class="center">Frameworks</h3>
+                        </div>
+                        <div class="body">
+                            <p class="card-body"><span class="check" aria-hidden="true">✔</span> Django</p>
+                            <p class="card-body"><span class="check" aria-hidden="true">✔</span> Flask</p>
+                            <p class="card-body"><span class="check" aria-hidden="true">✔</span> Express.js</p>
+                            <p class="card-body"><span class="check" aria-hidden="true">✔</span> Node.js runtime</p>
+                            <p class="card-body"><span class="check" aria-hidden="true">✔</span> Template engines
+                                (Jinja,
+                                Django templates)</p>
+                            <p class="card-body"><span class="check" aria-hidden="true">✔</span> Authentication systems
+                            </p>
+                            <p class="card-body"><span class="check" aria-hidden="true">✔</span> REST API structure</p>
+                            <p class="card-body"><span class="check" aria-hidden="true">✔</span> Routing & middleware
+                                basics
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Tools Card -->
+                    <div class="card feature-card" role="region" aria-labelledby="tools-title">
+                        <div class="head column-grid card-header">
+                            <h3 id="tools-title" class="center">Tools</h3>
+                        </div>
+                        <div class="body">
+                            <p class="card-body"><span class="check" aria-hidden="true">✔</span> Git & GitHub</p>
+                            <p class="card-body"><span class="check" aria-hidden="true">✔</span> Postman</p>
+                            <p class="card-body"><span class="check" aria-hidden="true">✔</span> VS Code</p>
+                            <p class="card-body"><span class="check" aria-hidden="true">✔</span> Linux / CLI</p>
+                            <p class="card-body"><span class="check" aria-hidden="true">✔</span> Virtual environments
+                            </p>
+                            <p class="card-body"><span class="check" aria-hidden="true">✔</span> Debugging tools</p>
+                            <p class="card-body"><span class="check" aria-hidden="true">✔</span> Browser DevTools</p>
+                            <p class="card-body"><span class="check" aria-hidden="true">✔</span> Basic automation
+                                scripts
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Databases & Deployment Card -->
+                    <div class="card feature-card" role="region" aria-labelledby="deployment-title">
+                        <div class="head column-grid card-header">
+                            <h3 id="deployment-title" class="center">Databases & Deployment</h3>
+                        </div>
+                        <div class="body">
+                            <p class="card-body"><span class="check" aria-hidden="true">✔</span> PostgreSQL</p>
+                            <p class="card-body"><span class="check" aria-hidden="true">✔</span> MySQL</p>
+                            <p class="card-body"><span class="check" aria-hidden="true">✔</span> SQLite</p>
+                            <p class="card-body"><span class="check" aria-hidden="true">✔</span> ORMs (Django ORM,
+                                SQLAlchemy basics)</p>
+                            <p class="card-body"><span class="check" aria-hidden="true">✔</span> Github fundamentals</p>
+                            <p class="card-body"><span class="check" aria-hidden="true">✔</span> CI/CD basics</p>
+                            <p class="card-body"><span class="check" aria-hidden="true">✔</span> Nginx / Gunicorn (basic
+                                usage)</p>
+                            <p class="card-body"><span class="check" aria-hidden="true">✔</span> Cloud deployment
+                                (Vercel, PythonAnywhere, etc)</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+            <!-- How I Work section describing development process -->
+        <section id="how-it-works" aria-labelledby="how-it-works-heading" role="region">
+
+
+            <div class="container width-65 color-white">
+
+                <!-- Intro Section -->
+                <h2 class="center title md-title bubble-text">
+                    How I Work?
+                </h2>
+                <p class="center mt-md subtitle">
+                    A structured approach to building robust, maintainable, and user-focused software.
+                </p>
+                <p class="center">
+                    From planning to deployment, I focus on clarity, collaboration, and delivering real results.
+                </p>
+
+                <!-- Workflow Steps -->
+                <h2 id="how-i-work-heading" class="center title md-title mt-lg bubble-text">
+                    My Process
+                </h2>
+
+                <div class="two-box-grid">
+
+                    <div class="plan center column-grid bg-white p-30 process-step" role="region"
+                        aria-labelledby="plan-title">
+                        <i class="fa-solid fa-pencil" aria-hidden="true"></i>
+                        <h3 id="plan-title">Plan</h3>
+                        <p class="mt-md center" aria-describedby="plan-title">
+                            Understand the problem, gather requirements, and define goals.
+                        </p>
+                    </div>
+
+                    <div class="develop center column-grid bg-white p-30 process-step" role="region"
+                        aria-labelledby="develop-title">
+                        <i class="fa-solid fa-code" aria-hidden="true"></i>
+                        <h3 id="develop-title" class="mt-md">Develop</h3>
+                        <p class="mt-md center" aria-describedby="develop-title">
+                            Write clean, maintainable code using the best tools and frameworks.
+                        </p>
+                    </div>
+
+                    <div class="test-optimize center column-grid bg-white p-30 process-step" role="region"
+                        aria-labelledby="test-optimize-title">
+                        <i class="fa-solid fa-flask" aria-hidden="true"></i>
+                        <h3 id="test-optimize-title" class="mt-md">Test & Optimize</h3>
+                        <p class="mt-md center" aria-describedby="test-optimize-title">
+                            Ensure performance, security, and usability through testing and iteration.
+                        </p>
+                    </div>
+
+                    <div class="deliver-collaborate center column-grid bg-white p-30 process-step" role="region"
+                        aria-labelledby="deliver-collaborate-title">
+                        <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+                        <h3 id="deliver-collaborate-title" class="mt-md">Deliver & Collaborate</h3>
+                        <p class="mt-md center" aria-describedby="deliver-collaborate-title">
+                            Deploy solutions, gather feedback, and work closely with clients or teammates.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+   
 
         <!-- The projects section -->
         <section id="projects" aria-label="Projects">
 
-            <h1 class="center padding-bottom-sm padding-top-lg">Projects</h1>
+            <h1 class="center padding-bottom-sm padding-top-lg color-white">Projects</h1>
             <div class="js-project">
                 <div class="cards" aria-label="Projects">
 
@@ -549,7 +715,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="faq.html" class="footer-link">Learn more about me</a>
+                    <a href="faq.html" class="footer-link">Learn more</a>
                 </div>
             </div>
 

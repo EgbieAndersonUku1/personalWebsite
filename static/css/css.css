@@ -13,6 +13,13 @@
 
     --box-shadow-primary: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     --box-shadow-secondary: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    --box-shadow-third: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    --box-shadow-quaterly: 0 8px 25px rgba(0, 0, 0, 0.3);
+
+    --background-primary: rgb(247, 247, 247);
+    --background-secondary:  radial-gradient(circle at 30% 20%, #0f172a, #0d1117 80%);
+    --background-tiertary:  radial-gradient(circle at top left, #0f172a, #0d1117);
+    
 
     /* The font sizes */
     --font-size-lg: 4.375rem; /* 70px */
@@ -25,6 +32,11 @@
     --padding-md: 60px;
     --padding-sm: 25px;
     --padding-xs: 10px;
+    --md-spacing: 16px;
+    --lg-spacing: 24px;
+    --xlg-spacing: 32px;
+    --xxl-spacing: 48px;
+    --xxxl-spacing: 64px;
 
     /* margins */
     --margin-lg: 100px;
@@ -36,10 +48,22 @@
     --dark-blue2:  rgb(36, 6, 80);
     --green-color:  rgb(2, 37, 2);
     --primary-color: #FCC32D; 
+    --blue-primary: rgb(23, 23, 181);
+    --green-primary: #28a745;
+    --red-primary: #dc3545;
+    --red-text-color: #D32F2F;
 
     /* widths */
     --global-width-md: 60%;
     --global-width-lg: 75%;
+
+
+    /* Spacing scale */
+    --xxs-spacing: 2px;
+    --xs-spacing: 4px;
+    --sm-spacing: 1rem;
+    
+      --container-width-65: 65%;
 }
 
 
@@ -280,17 +304,6 @@ label {
 /* ----------------------------  Images   ---------------------------------------------- */
 
 
-/* Call to action image  */
-.call-to-action-img {
-  opacity: 0.6;
-}
-
-.call-to-action-img {
-  position: absolute;
-  top: 10px; 
-  right: 90px;
-  width: 640px;
-}
 
 /* The technical skill image png */
 .technical-skill-img {
@@ -533,7 +546,7 @@ nav .container {
   gap: 2px;
 
   /* paddings */
-  padding: 20px;
+  padding: 10px;
  
 }
 
@@ -591,6 +604,7 @@ nav .container {
 
   text-align: left;
   color: #333333;
+ 
 
 
 }
@@ -642,7 +656,8 @@ nav .container {
 
 /* The project sections */
 #projects {
-  background: lavender;
+  
+  background: var(--background-secondary);
 
 }
 
@@ -690,7 +705,7 @@ nav .container {
 /* animates the text */
 #animated-text {
 
-  color: var(--dark-blue2);
+  color: #ffffff;
   display: inline-block;
 
   /* fonts */
@@ -699,17 +714,20 @@ nav .container {
 
   overflow: hidden;
   white-space: nowrap;
+  font-size: 1.2rem;
     
 }
 
 
 /* Centers the text */
+
+
 .center {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  text-align: center;
- 
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
 }
 
 
@@ -774,6 +792,7 @@ ul {
 
 ul li {
   justify-content: space-around;
+
 }
 
 .ul-buttons li a {
@@ -948,6 +967,335 @@ footer .container {
 
 
 
+/* ------------------------------------------ */
+/*        HTML Native Elements                */
+/* ------------------------------------------ */
+/*
+  Base reset and styling for native HTML tags
+*/
+
+
+/* anchor tags */
+
+
+ul li {
+    list-style: none;
+    color: green;
+    font-weight: 400;
+}
+
+
+
+
+
+/* 
+  Header and paragraph resets:
+  - Selectors and properties alphabetised
+  - Removes default spacing and borders
+*/
+
+/* headers */
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+h3 {
+    text-transform: capitalize;
+    font-size: 1.1rem;
+}
+
+
+/* ------------------------------------------ */
+/*                 Margins                    */
+/* ------------------------------------------ */
+/*
+  Utility margin classes:
+  - Spacing sizes: sm, md, lg
+  - Alphabetised and duplicates removed
+*/
+
+.mt-lg {
+    margin-top: var(--lg-spacing);
+}
+
+.mt-md {
+    margin-top: var(--md-spacing);
+}
+
+.mt-sm {
+    margin-top: var(--sm-spacing);
+}
+
+
+
+.mb-lg {
+    margin-bottom: var(--lg-spacing);
+}
+
+.mb-md {
+    margin-bottom: var(--md-spacing);
+}
+
+.mb-sm {
+    margin-bottom: var(--sm-spacing);
+}
+
+
+
+/* ------------------------------------------ */
+/*                 Padding                    */
+/* ------------------------------------------ */
+/*
+  Utility padding classes:
+  - Spacing sizes: sm, md, lg
+*/
+
+/* bottom padding */
+.pb-lg {
+    padding-bottom: var(--lg-spacing);
+}
+
+.pb-md {
+    padding-bottom: var(--md-spacing);
+}
+
+.pb-sm {
+    padding-bottom: var(--sm-spacing);
+}
+
+/* top padding */
+.pt-lg {
+    padding-top: var(--lg-spacing);
+}
+
+.pt-md {
+    padding-top: var(--md-spacing);
+}
+
+
+.pt-sm {
+    padding-top: var(--sm-spacing);
+}
+
+
+.p-30 {
+    padding: 30px;
+}
+
+
+/* ------------------------------------------ */
+/*               Backgrounds                  */
+/* ------------------------------------------ */
+/*
+  Background utility classes:
+  - Simple colour helpers
+  - Alphabetised for consistency
+*/
+
+.bg-ghostwhite {
+    background: lavender;
+}
+
+.bg-white {
+    background: #fff;
+}
+
+
+
+
+/* ------------------------------------------ */
+/*               Navigation                   */
+/* ------------------------------------------ */
+/*
+  Styles for navigation bars, links, and menus
+*/
+#nav-section {
+    background: ghostwhite;
+    background-color: #0A0F1A;
+    border-bottom: 3px solid lavender;
+    border-top: 3px solid lavender;
+    display: grid;
+    grid-template-columns: 10% 75% 15%;
+    grid-template-rows: auto;
+}
+
+.nav-links {
+    color: #C7C9CC;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+}
+
+.nav-link {
+    color: white;
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 200;
+    line-height: 1.4;
+    padding: 10px 10px;
+    text-transform: capitalize;
+}
+
+
+
+
+blockquote {
+    color: grey;
+    font-size: 1rem;
+    line-height: 1.8;
+  
+}
+
+
+
+
+/* ------------------------------------------ */
+/*             How It Works                   */
+/* ------------------------------------------ */
+/*
+  Styles for the 'How It Works' section
+*/
+
+#about-section,
+#skills,
+#how-it-works {
+    background: var(--background-secondary);
+    color: var(--white-color);
+    letter-spacing: 0.5px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+
+
+#how-it-works .container {
+    width: var(--container-width-65);
+    margin: auto; 
+    padding-top: var(--xxxl-spacing);
+    padding-bottom: var(--lg-spacing);
+
+}
+
+#about-section .container,
+#skills .container { 
+
+ padding-top: var(--xxxl-spacing);
+  padding-bottom: var(--xxxl-spacing);
+}
+
+
+#about-section .container p {
+  line-height: 1.8;
+}
+
+
+#how-it-works .container p {
+   font-size: 1rem;
+
+}
+
+
+
+
+/* ------------------------------------------ */
+/*                Icons                       */
+/* ------------------------------------------ */
+/*
+ 
+*/
+
+
+.fa-icon {
+    font-size: 1rem;
+    padding-right: 2px;
+}
+
+
+.checkmark-icon {
+    border: 1px solid green;
+    border-radius: 50%;
+    padding: 0.2rem;
+    background: green;
+    color: white;
+
+}
+
+.x-icon {
+ 
+    border: 1px solid red;
+    border-radius: 50%;
+    padding: 0.2rem;
+    background: red;
+    color: white;
+
+}
+
+
+/* X mark not available  */
+.x {
+    color: var(--red-text-color); /* red */
+    font-weight: bold;
+    margin-right: 0.75rem;
+    font-size: 1.2rem;
+     animation: pulse 2s infinite;
+}
+
+
+/* Check mark for available  */
+.check {
+    display: inline-block; 
+    margin-right: 0.75rem;
+    color: #4ade80;
+    font-size: 1.2rem;
+    text-shadow: 0 0 5px #4ade80, 0 0 10px #4ade80; /* subtle glow */
+    animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.8;
+        text-shadow: 0 0 5px #4ade80, 0 0 10px #4ade80;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 1;
+        text-shadow: 0 0 10px #4ade80, 0 0 20px #4ade80; 
+    }
+}
+
+
+
+
+/* ------------------------------------------ */
+/*                 Features                   */
+/* ------------------------------------------ */
+/*
+  Styles for feature display components
+*/
+#features {
+    background: var(--background-secondary);
+    padding-bottom: var(--xlg-spacing);
+}
+
+
+#features .container {
+    width: 80%;
+    margin: auto;
+
+}
+
+.feature-card {
+    background: var(--background-secondary);
+}
 
 
 
@@ -955,6 +1303,608 @@ footer .container {
 
 
 
+
+
+
+
+
+/* ------------------------------------------ */
+/*        Call to Action Banner               */
+/* ------------------------------------------ */
+/*
+  Styles for call-to-action buttons and banners
+*/
+
+/* 
+  Call-to-action section:
+  - Properties alphabetised within each selector
+  - Duplicate selectors merged
+  - Hover states grouped below their base selectors
+*/
+
+/* CTA hero image */
+#cta-hero-section-img {
+    height: 350px;
+    width: 350px;
+}
+
+#cta-hero-section-img:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+/* CTA title tail */
+#cta-title-tail {
+    background: lavender;
+    border: 2px solid ghostwhite;
+    color: var(--blue-primary);
+    padding-bottom: var(--xxs-spacing);
+    padding-right: calc(var(--sm-spacing) + var(--xs-spacing));
+    padding-top: var(--xxs-spacing);
+}
+
+
+
+/* CTA button */
+#cta-button {
+    background-color: var(--red-primary);
+    border: 2px solid pink;
+    color: var(--white-color);
+    font-size: var(--font-medium);
+    font-weight: 500;
+    padding: calc(var(--sm-spacing) + var(--xxl-spacing));
+    text-transform: capitalize;
+    width: 25%;
+}
+
+#cta-button:hover {
+    opacity: 0.8;
+    text-decoration: none;
+    transform: scale(1.1);
+}
+
+/* CTA wrapper */
+#call-to-action {
+    background: var(--background-secondary);
+    text-transform: capitalize;
+}
+
+#call-to-action p {
+    font-size: 1.25rem;
+    line-height: 1.125rem;
+}
+
+#cta-banner .container p {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+
+
+#cta-banner {
+    background: var(--background-tiertary);
+}
+
+
+/* ------------------------------------------ */
+/*                  Pagination                */
+/* ------------------------------------------ */
+/*
+*/
+
+ .pagination {
+    border: 1px solid black;
+    padding: var(--sm-spacing);
+    cursor: pointer;
+ }
+
+ .pagination:nth-child(even) {
+    background: black;
+    color: white;
+ }
+
+
+ 
+
+
+
+
+
+/* ------------------------------------------ */
+/*                  Footer                    */
+/* ------------------------------------------ */
+/*
+  Styles for footer layout and links
+*/
+
+footer {
+    background: #121212;
+    color: white;
+}
+
+.footer-header {
+    font-size: 1rem;
+    text-align: left;
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+footer nav ul  {
+    list-style: none;
+    text-align: left;
+    color: white;
+}
+
+
+
+footer nav ul li {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    color: white;
+}
+
+footer nav ul li a {
+  
+    color: white;
+    font-size: 0.75rem;
+}
+
+
+
+/* ------------------------------------------ */
+/*                  Utils                     */
+/* ------------------------------------------ */
+/*
+  Utility classes used across the project
+*/
+
+
+.text-gray-700 {
+    color: #374151;
+}
+
+
+small {
+    font-size: 0.75rem;
+}
+
+.subtle-grey {
+    color: #6b7280; /* subtle grey */
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+
+.text-red {
+    color: #dc3545; /* Bootstrap red */
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+
+
+.title {
+    text-transform: capitalize;
+}
+
+
+
+
+
+.bold {
+    font-weight: bold;
+}
+
+.sm-title {
+    font-size: 1.6rem;
+     line-height: 4rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.md-title {
+    font-size: 2rem;
+    line-height: 4rem;
+    font-weight: 200;
+    text-transform: capitalize;
+}
+
+.ms-title {
+    font-size: 1.4rem;
+    line-height: 4rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+
+.subtitle {
+    font-size: 1.25rem;
+    line-height: 2.5;
+}
+
+.bubble-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #ffffff, #4ade80);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 14px;
+}
+
+
+.font-white {
+    color: white;
+}
+
+.large-font-title {
+    font-size: 4rem;
+}
+
+
+.spaced-text {
+  letter-spacing: 1px;
+  word-spacing: 4px;
+  line-height: 1.6;
+}
+
+.small-heading {
+    font-size: 0.95rem;
+}
+
+.medium-heading {
+    font-size: 1.3rem;
+}
+
+
+
+
+/* ------------------------------------------ */
+/*             Combined Section                */
+/* ------------------------------------------ */
+/*
+  Styles for the product/service pricing section
+*/
+
+.feature-card {
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--background-secondary);
+    border-radius: 1rem;
+    }
+
+
+.feature-card .card-body {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--white-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--background-secondary);
+    backdrop-filter: blur(12px);
+    border-radius: 0.3rem;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  
+    }
+
+
+.feature-card .card-header {
+    padding: 5px 0px;
+        
+}
+
+
+
+
+
+
+
+/* ------------------------------------------ */
+/*                 Flex/Grid Utilities        */
+/* ------------------------------------------ */
+/*
+  Utility classes for flexbox and grid layouts:
+  - Flex direction, alignment, and display helpers
+  - Alphabetised for consistency
+*/
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.flex-grid {
+    display: grid;
+}
+
+.flex-start {
+    justify-content: flex-start;
+}
+
+
+
+.grid-column-20-80 {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto;
+
+}
+
+.grid-column-40-60 {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto;
+
+}
+
+
+/* ------------------------------------------ */
+/*                 Grid Utilities            */
+/* ------------------------------------------ */
+/*
+  Utility classes for flexbox and grid layouts:
+  - Flex direction, alignment, and display helpers
+  - Alphabetised for consistency
+*/
+
+
+.two-box-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    row-gap: 8px;
+    column-gap: 8px;
+    cursor: pointer;
+    
+}
+
+
+.column-grid {
+    display: grid;
+
+}
+
+.two-column-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+}
+
+
+.three-column-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+}
+
+
+/* ------------------------------------------ */
+/*                  Fonts                     */
+/* ------------------------------------------ */
+/*
+  Font families and typography helper classes
+*/
+
+.roboto-body {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "width" 100;
+}
+
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+/* ------------------------------------------ */
+/*                 Cards                   */
+/* ------------------------------------------ */
+/*
+
+*/
+.shadow-cards  {
+    display: grid;
+    column-gap: 10px;
+    padding-bottom: 100px;
+  
+}
+
+
+.row-gap-40 {
+    row-gap: 40px;
+}
+
+.shadow-cards .cards .card {
+    /* border: 1px solid lavender; */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-radius: 10px; 
+    cursor: pointer;
+}
+
+
+    
+/* .feature-card .card-body, */
+.process-step {
+    border-top: 0.5px solid lavender;
+    border-bottom: 0.5px solid lavender;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    border-radius: 2px;    
+    line-height: 1.5;    
+    text-transform: capitalize;  
+    font-weight: 400; 
+    padding-left: 30px;
+    font-size: 0.75rem;
+    color: black;
+    border: 3px solid goldenrod;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+              rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.process-step:hover {
+  transform: scale(1.2);
+  font-size: 0.9rem;
+}
+
+
+ .feature-card .card-header {
+    background: white;
+    padding: 12px 16px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    color: #2e2e2e; 
+    font-weight: 700;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid lavender;
+    font-size: 1.25rem;   
+    font-weight: 700;
+    color: #2e2e2e;    
+    
+}
+
+/* ------------------------------------------ */
+/*                Font awesome                 */
+/* ------------------------------------------ */
+/*
+ Font awesome
+*/
+
+
+.fa-solid {
+    font-size: 2rem;
+    cursor: pointer;
+  
+}
+
+.fa-solid:hover {
+    transform: scale(0.8);
+    opacity: 0.5;
+}
+
+
+
+/* ------------------------------------------ */
+/*                  Width                     */
+/* ------------------------------------------ */
+/*
+ The width sizes
+*/
+
+.width-60 {
+    width: 60%;
+    margin: auto;
+}
+
+.width-65 {
+    width: 65%;
+    margin: auto;
+}
+
+.width-70 {
+    width: 70%;
+    margin: auto;
+}
+
+.width-80 {
+    width: 80%;
+    margin: auto;
+}
+
+ #header-info {
+  background: #0A0F1A;
+  padding: 150px 20px;
+}
+
+/* The overlay */
+
+.counter {
+    font-size: 2.2rem;
+    word-spacing: 0.2rem;
+    letter-spacing: 1.5px;
+
+}
+
+
+#site-stats {
+   width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    margin-top: 80px;
+}
+
+
+
+.hero__title {
+   font-size: 3rem;
+   letter-spacing: 2px;
+   font-weight: 500;
+}
+
+.hero__subtitle {
+    letter-spacing: 1.5px;
+    margin-top: 8px;
+    line-height: 1.5;
+}
+
+
+#header-info {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* Spiral background */
+.hero__spiral {
+  position: absolute;
+  top: 0%;
+  left: 10%;
+  width: 1000px;
+  height: 900px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    rgba(46, 164, 79, 0.1),
+    rgba(255, 255, 255, 0.05),
+    rgba(46, 164, 79, 0.45),
+    rgba(255, 255, 255, 0.3)
+  );
+  transform: translate(-50%, -50%);
+  animation: spin 12s linear infinite;
+  filter: blur(70px);
+  z-index: 0;
+  opacity: 0.75;
+}
+
+@keyframes spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
 
 
 @keyframes spin {

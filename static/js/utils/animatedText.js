@@ -71,6 +71,7 @@
  */
 class TypeAnimator{
     
+
     constructor() {
         
         this._index                           = 0;
@@ -82,6 +83,7 @@ class TypeAnimator{
         this._erasingInterval                 = null;
         this._animatedTextElement             = null;
         this.phrasesArray                     = null;
+     
     }
 
     /**
@@ -178,8 +180,9 @@ class TypeAnimator{
             throw new Error("The identifier must start with a '.' (class) or '#' (id).");
         }
 
+        
         const animatedTextElement = document.querySelector(identifier);
-
+        
         if (!animatedTextElement) {
             throw new Error("The identifier (id or class) for animated text couldn't be located. Null was returned.");
         }
