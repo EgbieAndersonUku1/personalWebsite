@@ -1240,7 +1240,7 @@ blockquote {
 
 
 /* X mark not available  */
-.x {
+.cross {
     color: var(--red-text-color); /* red */
     font-weight: bold;
     margin-right: 0.75rem;
@@ -1795,7 +1795,7 @@ small {
 
 
 .fa-solid {
-    font-size: 2rem;
+    font-size: 1.2rem;
     cursor: pointer;
   
 }
@@ -1924,9 +1924,249 @@ small {
 
 
 
+/* =========================================================
+   MOBILE STYLES – up to 768px
+   ========================================================= */
+@media (max-width: 768px) {
+
+  /* ------------------------------
+     Typography & General Layout
+     ------------------------------ */
+  .subtitle {
+    display: none;
+  }
+
+  #skills-title {
+    font-size: 1.2rem;
+    padding: var(--xxs-spacing);
+  }
+
+  #about-section,
+  #skills,
+  #how-it-works {
+    letter-spacing: 0.1px;
+    line-height: 1.2;
+  }
+
+  /* ------------------------------
+     Header / Hero Visibility
+     ------------------------------ */
+  #header-info {
+    background: #0A0F1A;
+    padding-top: 26px;
+    display: none;
+  }
+
+  #how-i-work-heading,
+  .banner,
+  .hero__spiral,
+  .view-more-btn,
+  .p-text {
+    display: none;
+  }
+
+  /* ------------------------------
+     Grid Layout Adjustments
+     ------------------------------ */
+  #site-stats {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    margin-top: 11px;
+  }
+
+  #projects .cards,
+  #problem-breakdown,
+  .shadow-cards {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    width: 100%;
+    padding-bottom: 0;
+    row-gap: 10px;
+  }
+
+  .ul-technologies {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+  }
+
+  /* ------------------------------
+     Cards & Feature Blocks
+     ------------------------------ */
+  #projects .cards .card {
+    background: white;
+    border: 2px solid lavender;
+    display: grid;
+    grid-template-columns: 100%;
+    column-gap: 2px;
+    padding: 20px;
+  }
+
+  .js-project .cards .card .head {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .feature-card .card-body {
+    border-radius: 0.3rem;
+    font-size: 1rem;
+  }
+
+  .feature-card .card-header {
+    background: white;
+    padding: 12px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  #skills .cards .card:hover {
+    background: lavender;
+    transform: scale(1);
+  }
+
+  /* ------------------------------
+     Process / Steps
+     ------------------------------ */
+  .process-step {
+    border: none;
+  }
+
+  .process-step:hover {
+    transform: scale(1);
+  }
+
+  /* ------------------------------
+     About & Skills Section Layout
+     ------------------------------ */
+  #skills {
+    padding-bottom: 0;
+  }
+
+  #about-section .container,
+  #skills .container {
+    width: 100%;
+    padding-bottom: 0;
+  }
+
+  #about-section .container h3 {
+    display: none;
+  }
+
+  #about-section .container p {
+    line-height: 2;
+    padding: 0 25px 20px 25px;
+  }
+
+  #skills .container p {
+    width: 100%;
+    line-height: 1.8;
+  }
+
+  #skills .container .description {
+    display: none;
+  }
+
+  #how-it-works .container {
+    width: 100%;
+    padding-top: 0;
+  }
+
+  /* ------------------------------
+     CTA Section
+     ------------------------------ */
+  .cta-section .container {
+    padding: 30px;
+  }
+
+  .cta-section .container p {
+    display: grid;
+  }
+
+  /* ------------------------------
+     Misc / Buttons / Text
+     ------------------------------ */
+  .view .buttons a {
+    width: 100%;
+  }
+
+  #project-sidebar {
+    width: 100%;
+  }
+
+  #projects h1 {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 1.2rem;
+
+  }
+
+  .bubble-text {
+    font-size: 1.3rem;
+  }
+}
 
 
 
 
 
+/* =========================================================
+   MOBILE STYLES – up to 480 (really small)
+   ========================================================= */
+@media (max-width: 480px) {
 
+  /* ------------------------------
+     Typography & General Layout
+     ------------------------------ */
+
+  #skills-title {
+    font-size: 1.2rem;
+    padding: var(--xxl-spacing);
+  }
+
+  
+
+  .feature-card .card-body {
+    border-radius: 0.3rem;
+    font-size: 0.7rem;
+  }
+
+  .feature-card .card-header {
+    background: white;
+    padding: 12px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  #skills .cards .card:hover {
+    background: lavender;
+    transform: scale(1);
+  }
+
+ 
+  /* ------------------------------
+     Misc / Buttons / Text
+     ------------------------------ */
+ 
+  .js-project h1 {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 1rem;
+  }
+
+
+  #projects h1 {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 1.2rem;
+
+  }
+
+}
