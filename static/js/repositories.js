@@ -69,7 +69,7 @@ const listOfRepositories = [
   name: "Human seconds",
   description: "Convert seconds into clean, human-readable time strings in Python.",
   languages: ["Python"],
-  gitLink: "https://github.com/EgbieAndersonUku1/django_2fa_recovery_codes",
+  gitLink: "https://github.com/EgbieAndersonUku1/human_seconds",
   image: "static/img/png/human-seconds.png",
   hasWebsite: true,
   websiteUrl: "https://pypi.org/project/human-seconds/",
