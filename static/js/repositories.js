@@ -9,7 +9,7 @@ function addToRepository(repository) {
 
 const listOfRepositories = [
 
-    {
+ {
   name: "Django 2FA Recovery Codes",
   description: "A Django app for generating, managing, and validating one-time use recovery codes as a backup for two-factor authentication (2FA). Users are given a set of secure recovery codes that can be used if they lose access to their primary 2FA method. Each code is invalidated after use to ensure better security.",
   languages: ["Python", "Django", "HTML", "CSS"],
@@ -34,7 +34,7 @@ const listOfRepositories = [
 },
 
 
-    {
+ {
   name: "Django Email Sender",
   description: "A clean, reusable, lightweight and chainable utility for sending emails in Django. Supports HTML and plain-text templates, context injection, and optional logging or database integration for tracking email delivery. It uses a fluent API so templated emails can be composed and sent with minimal boilerplate.",
   languages: ["Python", "Django", "HTML", "Text", "CSS"],
@@ -62,6 +62,35 @@ const listOfRepositories = [
     "open source",
   ]
 },
+
+
+
+ {
+  name: "Human seconds",
+  description: "Convert seconds into clean, human-readable time strings in Python.",
+  languages: ["Python"],
+  gitLink: "https://github.com/EgbieAndersonUku1/django_2fa_recovery_codes",
+  image: "static/img/png/human-seconds.png",
+  hasWebsite: true,
+  websiteUrl: "https://pypi.org/project/human-seconds/",
+  dateCreated: "2025-12-14",
+  indexed: "",
+  projectStatus: "Completed",
+  tags: [
+    "Python",
+    "Time Conversion",
+    "Utilities",
+    "Human-Readable",
+    "Python Library",
+    "Developer Tools",
+    "DateTime",
+    "Formatting",
+    "Productivity",
+    "Open Source"
+    ]
+
+},
+
 
     {
     name: 'Portfolio',
